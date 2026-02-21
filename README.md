@@ -1,6 +1,16 @@
-# React + Webpack Project
+# IP Lookup
 
-This is a minimal React project bootstrapped with Webpack and Babel.
+A React application for looking up IP addresses and retrieving geographic information including country and timezone data.
+
+## About
+
+This project allows users to:
+- Enter one or more IP addresses
+- Retrieve country and timezone information for each IP
+- Display country flags and local time in the IP's timezone
+- Validate IP addresses in real-time
+
+Built with React + TypeScript, Webpack, and tested with Jest + React Testing Library.
 
 ## Scripts
 
