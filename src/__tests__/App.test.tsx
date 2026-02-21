@@ -1,4 +1,3 @@
-// mock uuid so Jest doesn't try to load the actual ESM package
 jest.mock('uuid', () => {
   let counter = 0;
   return { v4: jest.fn(() => `test-id-${counter++}`) };
