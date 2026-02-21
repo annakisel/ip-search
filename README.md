@@ -6,6 +6,20 @@ This is a minimal React project bootstrapped with Webpack and Babel.
 
 - `npm start` — Start the development server
 - `npm run build` — Build the production bundle
+- `npm test` — Run the Jest unit test suite (React Testing Library)
+
+## Usage
+
+### Running Tests
+
+The project includes a basic Jest suite covering utilities and components. To execute:
+
+```sh
+npm test
+```
+
+Tests are written with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) and use `@testing-library/jest-dom` for DOM matchers. CSS/SCSS imports are mocked via `identity-obj-proxy` in the Jest configuration.
+
 
 ## Usage
 
