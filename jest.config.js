@@ -5,4 +5,5 @@ module.exports = {
     '\\.(css|scss)$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
+  transformIgnorePatterns: ['/node_modules/(?!(uuid)/)'],
 };

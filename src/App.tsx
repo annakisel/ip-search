@@ -5,14 +5,13 @@ import Header from './components/Header';
 import AddButton from './components/AddButton';
 import IpRow from './components/IpRow';
 import { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const App: React.FC = () => {
-  const [rowIds, setRowIds] = useState<number[]>([1]);
-  const [nextId, setNextId] = useState<number>(2);
+  const [rowIds, setRowIds] = useState<string[]>(() => [uuidv4()]);
 
   const handleAdd = (): void => {
-    setRowIds(prev => [...prev, nextId]);
-    setNextId(prev => prev + 1);
+    setRowIds(prev => [...prev, uuidv4()]);
   };
 
   return (
@@ -22,8 +21,8 @@ const App: React.FC = () => {
         <div className="desc">Enter one or more IP addresses and get their country</div>
         <AddButton onClick={handleAdd} />
         <hr />
-        {rowIds.map((id, idx) => (
-          <IpRow key={id} index={idx} />
+        {rowIds.map((id, index) => (
+          <IpRow key={id} index={index} />
         ))}
       </div>
     </div>
